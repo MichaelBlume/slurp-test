@@ -40,6 +40,8 @@
 
 (defn bench-slurp [nc filename]
   (println "writing test file")
+  (println "filename:" filename)
+  (println "file size:" nc "bytes")
   (spit filename (apply str (repeatedly nc
                                 #(char (+ (long \a) (rand-int 26))))))
   (println "benching old slurp")
