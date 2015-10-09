@@ -36,8 +36,6 @@
                (.append sb (char c))
                (recur (.read r)))))))))
 
-(char (+ (long \a) (rand-int 26)))
-
 (defn bench-slurp [nc filename]
   (println "writing test file")
   (println "filename:" filename)
